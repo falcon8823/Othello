@@ -4,7 +4,7 @@ final int SPAN = 10; //余白
 // フィールドクラス
 class Field {
   private final int SIZE;
-  //private Cell[][] cells;
+  private Cell[][] cells;
   
   public Field(int s) {
     SIZE = s; //縦横それぞれのセル数
