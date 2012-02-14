@@ -30,5 +30,15 @@ class Cell {
       );
     }
   }
+  
+  // クリックされたか
+  public boolean isClicked(int mx, int my) {
+    if(
+      mx > (x * CELL_SIZE + 10) && mx < (x * CELL_SIZE + 10 + CELL_SIZE) &&
+      my > (y * CELL_SIZE + 10) && my < (y * CELL_SIZE + 10 + CELL_SIZE) ) {
+      return true;
+    }
+    return false;
+  }
 }
 

@@ -22,3 +22,6 @@ void draw() {
   f.drawPieces(); // コマの描画
 }
 
+void mouseClicked() {
+  f.checkClicked();
+}

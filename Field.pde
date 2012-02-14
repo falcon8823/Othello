@@ -17,7 +17,7 @@ class Field {
       for(int x = 0; x < SIZE; x++) {
         cells[x][y] = new Cell(x, y, (x+y) % 3); // 描画テスト
       }
-    } 
+    }
   }
   
   // コマの描画
@@ -60,6 +60,15 @@ class Field {
     ellipse(2 * CELL_SIZE + 10, 6 * CELL_SIZE + 10, 5, 5); // 左下
     ellipse(6 * CELL_SIZE + 10, 6 * CELL_SIZE + 10, 5, 5); // 右下
 
+  }
+  
+  // マウスクリックのチェック
+  public void checkClicked() {
+    for(int y = 0; y < SIZE; y++) {
+      for(int x = 0; x < SIZE; x++) {
+        println(x + " " + y + ": " + cells[x][y].isClicked(mouseX, mouseY));
+      } 
+    }
   }
 }
 
