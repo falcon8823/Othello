@@ -7,15 +7,26 @@ class Field {
   private Cell[][] cells;
   
   public Field(int s) {
-    SIZE = s; //縦横それぞれのセル数
-  }
-  
-  // フィールドの初期化
-  public void init() {
+    SIZE = s; // 縦横それぞれのセル数
+    
+    //領域確保
+    cells = new Cell[SIZE][SIZE];
+    
+    // 初期化
+    for(int y = 0; y < SIZE; y++) {
+      for(int x = 0; x < SIZE; x++) {
+        cells[x][y] = new Cell(x, y, (x+y) % 3); // 描画テスト
+      }
+    } 
   }
   
   // コマの描画
   public void drawPieces() {
+    for(int y = 0; y < SIZE; y++) {
+      for(int x = 0; x < SIZE; x++) {
+        cells[x][y].drawPiece();
+      } 
+    }
   }
   
   // 画面・横サイズ
@@ -30,6 +41,8 @@ class Field {
   
   // 枠の描画
   public void drawFrame() {
+    stroke(0);
+    
     // 枠
     for(int x = 0; x <= SIZE; x++) {
       int i = x * CELL_SIZE + SPAN;
@@ -48,7 +61,6 @@ class Field {
     ellipse(6 * CELL_SIZE + 10, 6 * CELL_SIZE + 10, 5, 5); // 右下
 
   }
-  
 }
 
 
