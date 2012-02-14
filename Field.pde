@@ -41,13 +41,12 @@ class Field {
     }
     
     //点
-    for(int y = 1; y < SIZE; y++) {
-      for(int x = 1; x < SIZE; x++) {
-        if(x % 2 == 0 && y % 2 == 0) {
-          ellipse(x * CELL_SIZE + 10, y * CELL_SIZE + 10, 5, 5);
-        }
-      }
-    }
+    fill(0);
+    ellipse(2 * CELL_SIZE + 10, 2 * CELL_SIZE + 10, 5, 5); // 左上
+    ellipse(6 * CELL_SIZE + 10, 2 * CELL_SIZE + 10, 5, 5); // 右上
+    ellipse(2 * CELL_SIZE + 10, 6 * CELL_SIZE + 10, 5, 5); // 左下
+    ellipse(6 * CELL_SIZE + 10, 6 * CELL_SIZE + 10, 5, 5); // 右下
+
   }
   
 }

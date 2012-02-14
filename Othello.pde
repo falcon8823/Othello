@@ -10,7 +10,7 @@ void setup() {
   
   //描画関連
   smooth();
-  stroke(255);
+  stroke(0);
   strokeWeight(2);
 }
 
